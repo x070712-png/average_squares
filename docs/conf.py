@@ -21,7 +21,7 @@ release = '1.0'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    'sphinx.ext.intersphinx'
+    'sphinx.ext.intersphinx',
     'sphinx.ext.autodoc',
 ]
 
