@@ -13,4 +13,4 @@ This project provides functions for computing weighted averages of squares and c
    :maxdepth: 2
    :caption: Contents:
 
-content/average-squares-docs
+   content/average-squares-docs
