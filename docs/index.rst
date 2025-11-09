@@ -6,11 +6,11 @@
 average_squares documentation
 =============================
 
-This project provides functions for computing weighted averages of squares
-and converting lists of numeric strings into numbers
+This project provides functions for computing weighted averages of squares and converting lists of numeric strings into numbers.
 
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
+content/average-squares-docs
