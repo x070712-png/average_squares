@@ -57,11 +57,11 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Copute weighted average of squares")
     parser.add_argument('--weights', '-w',nargs='+', required=False,
         help="List of weights, separated by space or comma. Example: '1 1 1'. Optional.")
-    parser.add_argument('--numbers', '-n', nargs='+', required=True,
+    parser.add_argument('file_numbers', required=True,
         help="List of numbers, separated by space or comma. Example: '1 2 4' or '1,2,4'")
     arguments= parser.parse_args()      
     
-    numbers = convert_numbers(arguments.numbers)
+    numbers = read_numbers_from_file(args.file_numbers)
     weights = convert_numbers(arguments.weights) if arguments.weights else None
     
     result = average_of_squares(numbers, weights)
