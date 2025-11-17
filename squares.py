@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """Computation of weighted average of squares."""
 
 
@@ -51,11 +53,16 @@ def convert_numbers(list_of_strings):
 
 
 if __name__ == "__main__":
-    numbers_strings = ["1","2","4"]
-    weight_strings = ["1","1","1"]        
+    import argparse
+    parser = argparse.ArgumentParser(description="Copute weighted average of squares")
+    parser.add_argument('--weights', '-w',nargs='+', required=False,
+        help="List of weights, separated by space or comma. Example: '1 1 1'. Optional.")
+    parser.add_argument('--numbers', '-n', nargs='+', required=True,
+        help="List of numbers, separated by space or comma. Example: '1 2 4' or '1,2,4'")
+    arguments= parser.parse_args()      
     
-    numbers = convert_numbers(numbers_strings)
-    weights = convert_numbers(weight_strings)
+    numbers = convert_numbers(arguments.numbers)
+    weights = convert_numbers(arguments.weights) if arguments.weights else None
     
     result = average_of_squares(numbers, weights)
     
